@@ -18,8 +18,9 @@ public class JsoupDemo {
             //fl shoplist04
             Elements elements = document.getElementsByClass("fl shoplist04");
             for (Element e : elements) {
-                System.out.println(e.getElementsByTag("p").text());
-
+                Elements elements1 = e.getElementsByTag("p");
+                Element element = elements1.get(1);
+                System.out.println(element.text());
                 //System.out.println(e);
                 //System.out.println(e.text());
             }
